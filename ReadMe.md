@@ -16,7 +16,7 @@ To Setup Your Code and Live Site (GitHub and GitHub Pages) first **sign in or cr
 
 1. Once logged in, go to the [Example Code Repo](https://github.com/sheiva/aframe-starter-pack): https://github.com/sheiva/aframe-starter-pack
 2. Click **Fork** in the top right corner.
-> *This step ^ makes your own copy of the example repo that you can **edit freely***
+> This step ^ makes your own copy of the example repo that you can **edit freely**
 
 
 ### Publish Your Live A-Frame Site
@@ -70,7 +70,7 @@ To Setup Your Code and Live Site (GitHub and GitHub Pages) first **sign in or cr
 
 > Keep doing this step as you continue editing. This way your work isn't just saved to your computer but is synced to your Github account (and automatically updates your Github Pages live site).
 
-As you work, remember to save your files in VS Code. When you want to save your work to GitHub:
+As you work, remember to save your files in VS Code and periodically sync your work to GitHub:
 
 1. Go back to **GitHub Desktop**.
 2. You will see your changed files listed.

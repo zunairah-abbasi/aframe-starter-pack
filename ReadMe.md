@@ -53,21 +53,22 @@ To **edit a copy of your code locally and keep everything synced** with your onl
 4. Choose where you want the project saved on your computer.
 5. Click **Clone**.
 
-### Open the Project in VS Code
+### Open the Project in VS Code and Preview Your Page Locally
 
 1. In GitHub Desktop, go to: **Repository → Open in Visual Studio Code**.
-2. In VS Code, open the `index.html` file.
-3. Add your name in the `index.html` after "by".
+2. In VS Code, open the **Extensions** tab.
+3. Search for and install **Live Preview** by Microsoft.
+4. Right-click `index.html` and choose **Open with Live Preview**.
+5. Your page should open in a browser so you can preview it while you work.
+
+> Congratulations! You've set up everything to get going with your own experiments with this Starter Pack! Now, repeat this following steps (Edit Your Code Locally -> Save, Commit and Push) as you continue editing your code. This way your work isn't just saved to your computer but is synced to your Github account (and automatically updates your Github Pages live site).
+
+### Edit Your Code Locally and Preview it
+1. In VS Code, open the `index.html` file.
+2. Add your name in the `index.html` after "by".
    - `"webAR experiments in A-frame <b>by __YourName____</b>."`
-
-### Preview Your Page Locally
-
-1. In VS Code, open the **Extensions** tab.
-2. Search for and install **Live Preview** by Microsoft.
 3. Right-click `index.html` and choose **Open with Live Preview**.
-4. Your page should open in a browser so you can preview it while you work.
-
-> Congratulations! You've set up everything to get going with your own experiments with this Starter Pack! Now, repeat this following step (Save, Commit and Push) as you continue editing your code. This way your work isn't just saved to your computer but is synced to your Github account (and automatically updates your Github Pages live site).
+5. Your page should open in a browser so you can preview it while you work.
 
 ### Save, Commit, and Push Changes to Github
 

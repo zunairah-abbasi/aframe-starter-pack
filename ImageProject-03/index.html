@@ -18,16 +18,6 @@
         material="shader: flat">
       </a-sphere>
 
-      <!-- Light from the sun -->
-      <a-light 
-        type="point" 
-        intensity="1.2" 
-        color="#fff5cc" 
-        position="0 2 -6">
-      </a-light>
-
-      <a-light type="ambient" intensity="0.4" color="#ffffff"></a-light>
-
 
       <!-- Earth orbit -->
       <a-entity position="0 2 -6"
@@ -131,6 +121,8 @@
         animation="property: position; to: 5 4 -9; dir: alternate; loop: true; dur: 12000; easing: linear"
         animation__spin="property: rotation; to: 360 360 360; loop: true; dur: 16000">
       </a-entity>
+
+      <!-- Light --> <a-light type="point" intensity="1.2" color="white" position="0 3 -5"></a-light>
 
       <a-entity 
         camera 

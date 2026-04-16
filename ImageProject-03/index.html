@@ -1,15 +1,144 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <script src="https://aframe.io/releases/1.7.1/aframe.min.js"> </script>
+    <script src="https://aframe.io/releases/1.7.1/aframe.min.js"></script>
   </head>
   <body>
     <a-scene>
-      <a-box position="-1 0.5 -3" rotation="0 45 0" color="#4CC3D9"></a-box>
-      <a-sphere position="0 1.25 -5" radius="1.25" color="#EF2D5E"></a-sphere>
-      <a-cylinder position="1 0.75 -3" radius="0.5" height="1.5" color="#FFC65D"></a-cylinder>
-      <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane>
-      <a-sky color="#ECECEC"></a-sky>
+
+      <!-- Sky -->
+      <a-sky src="space.jpeg"></a-sky>
+
+      
+      <!-- Sun -->
+      <a-sphere 
+        position="0 2 -6" 
+        radius="1.5" 
+        src="sun.jpg"
+        material="shader: flat">
+      </a-sphere>
+
+      <!-- Light from the sun -->
+      <a-light 
+        type="point" 
+        intensity="1.2" 
+        color="#fff5cc" 
+        position="0 2 -6">
+      </a-light>
+
+      <a-light type="ambient" intensity="0.4" color="#ffffff"></a-light>
+
+
+      <!-- Earth orbit -->
+      <a-entity position="0 2 -6"
+        animation="property: rotation; to: 0 360 0; loop: true; dur: 10000">
+
+        <!-- Earth -->
+        <a-entity position="2.5 0 0">
+
+          <a-sphere 
+            radius="0.5" 
+            src="earth.jpg"
+            rotation="0 0 23"
+            animation="property: rotation; to: 0 360 0; loop: true; dur: 5000">
+          </a-sphere>
+
+          <!-- Moon orbiting Earth -->
+          <a-entity animation="property: rotation; to: 0 360 0; loop: true; dur: 3000">
+
+            <a-sphere 
+              position="1 0 0" 
+              radius="0.15" 
+              src="moon.jpg">
+            </a-sphere>
+
+          </a-entity>
+
+        </a-entity>
+
+      </a-entity>
+
+      <!-- Mars orbit -->
+      <a-entity position="0 2 -6"
+        animation="property: rotation; to: 0 360 0; loop: true; dur: 14000">
+        
+        <a-sphere 
+          position="4 0 0" 
+          radius="0.3" 
+          src="mars.jpg"
+          rotation="0 0 15"
+          animation="property: rotation; to: 0 360 0; loop: true; dur: 6000">
+        </a-sphere>
+
+      </a-entity>
+
+
+      <!-- Jupiter orbit -->
+      <a-entity position="0 2 -6"
+        animation="property: rotation; to: 0 360 0; loop: true; dur: 18000">
+        
+        <a-sphere 
+          position="6 0.3 0" 
+          radius="0.8" 
+          src="jupiter.jpg"
+          rotation="0 0 15"
+          animation="property: rotation; to: 0 360 0; loop: true; dur: 7000">
+        </a-sphere>
+
+      </a-entity>
+
+
+      <!-- Saturn orbit -->
+      <a-entity position="0 2 -6"
+        animation="property: rotation; to: 0 360 0; loop: true; dur: 22000">
+
+        <a-entity 
+          gltf-model="Planet.glb" 
+          position="8 0 0" 
+          scale="0.5 0.5 0.5"
+          animation="property: rotation; to: 0 360 0; loop: true; dur: 9000">
+        </a-entity>
+
+      </a-entity>
+
+
+      <a-entity 
+      position="-2 1 -4" 
+      animation="property: rotation; to: 0 360 0; loop: true; dur: 4000">
+    
+        <!-- Saucer -->
+        <a-entity 
+          gltf-model="FlyingSaucer.glb" 
+          scale="0.5 0.5 0.5">
+        </a-entity>
+      
+        <!-- Beam -->
+        <a-cone 
+          position="0 -1 0" 
+          radius-bottom="0.6" 
+          height="2" 
+          rotation="180 0 0"
+          material="color: #00ffff; opacity: 0.2">
+        </a-cone>
+    
+      </a-entity>
+
+      <!-- Asteroid -->
+      <a-entity 
+        gltf-model="Asteroid.glb" 
+        position="-5 3 -9" 
+        scale="0.2 0.2 0.2"
+        animation="property: position; to: 5 4 -9; dir: alternate; loop: true; dur: 12000; easing: linear"
+        animation__spin="property: rotation; to: 360 360 360; loop: true; dur: 16000">
+      </a-entity>
+
+      <a-entity 
+        camera 
+        position="0 1.6 0"
+        look-controls="pointerLockEnabled: true"
+        wasd-controls="acceleration: 30">
+      </a-entity>
+
     </a-scene>
   </body>
 </html>
